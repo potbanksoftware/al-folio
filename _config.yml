@@ -16,9 +16,8 @@ footer_text: >
   Photos from <a href="https://unsplash.com" target="_blank">Unsplash</a>.
 keywords: jekyll, jekyll-theme, academic-website, portfolio-website # add your own keywords or leave empty
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
-icon: ⚛️ # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
 
-url: https://alshedivat.github.io # the base hostname & protocol for your site
+url: https://potbanksoftware.github.io # the base hostname & protocol for your site
 baseurl: /al-folio # the subpath of your site, e.g. /blog/. Leave blank for root
 last_updated: false # set to true if you want to display last updated in the footer
 impressum_path: # set to path to include impressum link in the footer, use the same path as permalink in a page, helps to conform with EU GDPR
@@ -473,6 +472,12 @@ third_party_libraries:
     url:
       js: "https://cdn.jsdelivr.net/npm/jquery@{{version}}/dist/jquery.min.js"
     version: "3.6.0"
+  anchorjs:
+    integrity:
+      js: "sha256-aQmOEF2ZD4NM/xt4hthzREIo/2PFkOX/g01WjxEV7Ys="
+    url:
+      js: "https://cdn.jsdelivr.net/npm/anchor-js@{{version}}/anchor.min.js"
+    version: "5.0.0"
   leaflet:
     integrity:
       css: "sha256-q9ba7o845pMPFU+zcAll8rv+gC+fSovKsOoNQ6cynuQ="
