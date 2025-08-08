@@ -1,0 +1,9 @@
+# blog authors
+authors:
+  - name: "A Tester"
+    handle: "test"
+    avatar: "profile-pictures/test.jpeg"
+    follow:
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: https://github.com/octocat

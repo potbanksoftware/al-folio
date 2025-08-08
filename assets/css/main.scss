@@ -3,6 +3,8 @@
 ---
 @charset "utf-8";
 
+@import "bootstrap/bootstrap.scss";
+
 // Dimensions
 $max-content-width: {{ site.max_width }};
 
@@ -15,6 +17,7 @@ $max-content-width: {{ site.max_width }};
   "cv",
   "tabs",
   "typograms",
+  "blog_post_author",
   "font-awesome/fontawesome",
   "font-awesome/brands",
   "font-awesome/solid",

@@ -13,16 +13,44 @@ layout: default
   </style>
 {% endif %}
 
+{% for author_data in site.data.authors.authors %}
+  {% if author_data['handle'] == page.author %}
+    {% assign blog_author = author_data %}
+    {% break %}
+  {% endif %}
+{% endfor %}
+
+{% capture bl_au_avatar %}
+{{ '/assets/img/' | relative_url | append: blog_author.avatar }}
+{% endcapture %}
+
+{% capture bl_au_av_alt %}
+{{ blog_author.name }} avatar.
+{% endcapture %}
+
 <div class="post">
   <header class="post-header">
     <h1 class="post-title">{{ page.title }}</h1>
-    <p class="post-meta">
-      Created on {{ page.date | date: '%B %d, %Y' }}
-      {% if page.author %}by {{ page.author }}{% endif %}
-      {% if page.last_updated %}, last updated on {{ page.last_updated | date: '%B %d, %Y' }}{% endif %}
-      {% if page.meta %}• {{ page.meta }}{% endif %}
-    </p>
-    <p class="post-tags">
+    <div class="row align-items-center py-2 border-top blog-post-author">
+      <div class="col-auto pr-0 pb-1">
+        <img src="{{ bl_au_avatar | strip }}" alt="{{ bl_au_av_alt | strip }}"
+          class="rounded-circle shadow-sm blog-post-author-avatar ">
+      </div>
+      <div class="col pr-0 pb-1">
+        <p class="post-meta">
+          Created on {{ page.date | date: '%B %d, %Y' }}
+          {% if page.author %}by {{ blog_author.name }}{% endif %}
+          {% if page.last_updated %}, last updated on {{ page.last_updated | date: '%B %d, %Y' }}{% endif %}
+          {% if page.meta %}• {{ page.meta }}{% endif %}
+        </p>
+        <p class="post-meta">{{ blog_author.handle }}
+          {% for follow in blog_author.follow %}
+            <a class="text-info" href="{{ follow.url }}"><i class="{{ follow.icon }}"></i>{{ follow.label }}</a>
+          {% endfor %}
+        </p>
+      </div>
+    </div>
+    <p class="post-tags border-bottom pb-0">
       {% if url_beginning == '/blog/' %}
         <a href="{{ year | prepend: '/blog/' | relative_url }}"> <i class="fa-solid fa-calendar fa-sm"></i> {{ year }} </a>
       {% else %}
