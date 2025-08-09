@@ -6,16 +6,16 @@
  Copyright (c) 2019 Mani Kumar
 ======================*/
 .blog-post-author {
-    &-avatar {
-        width: 64px;
-        height: 64px;
-        padding: 0.15rem;
+      &-avatar {
+          width: 64px;
+          height: 64px;
+          padding: 0.15rem;
 
-        @include media-breakpoint-down(md) {
-            width: 32px;
-            height: 32px;
-            padding: 0.10rem;
-        }
-    }
+          @include media-breakpoint-down(md) {
+              width: 32px;
+              height: 32px;
+              padding: 0.10rem;
+          }
+      }
 
-}
+  }
