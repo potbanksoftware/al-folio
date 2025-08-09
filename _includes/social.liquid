@@ -28,6 +28,10 @@
       <a href="https://inspirehep.net/authors/{{ social[1] }}" title="Inspire HEP"><i class="ai ai-inspire"></i></a>
     {% when 'instagram_id' %}
       <a href="https://instagram.com/{{ social[1] }}" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+    {% when 'threads_id' %}
+      <a href="https://threads.com/@{{ social[1] }}" title="Threads"><i class="fa-brands fa-threads"></i></a>
+    {% when 'itch_id' %}
+      <a href="https://{{ social[1] }}.itch.io" title="Itch.io"><i class="fa-brands fa-itch-io"></i></a>
     {% when 'kaggle_id' %}
       <a href="https://www.kaggle.com/{{ social[1] }}" title="Kaggle"><i class="fa-brands fa-kaggle"></i></a>
     {% when 'keybase_username' %}

@@ -126,6 +126,12 @@
       {% when 'instagram_id' %}
         {% capture link %}https://instagram.com/{{ social[1] }}{% endcapture %}
         {% assign sameaslinks = sameaslinks | push: link %}
+      {% when 'threads_id' %}
+        {% capture link %}https://threads.com/@{{ social[1] }}{% endcapture %}
+        {% assign sameaslinks = sameaslinks | push: link %}
+      {% when 'itch_id' %}
+        {% capture link %}https://{{ social[1] }}.itch.io/{% endcapture %}
+        {% assign sameaslinks = sameaslinks | push: link %}
       {% when 'kaggle_id' %}
         {% capture link %}https://www.kaggle.com/{{ social[1] }}{% endcapture %}
         {% assign sameaslinks = sameaslinks | push: link %}
