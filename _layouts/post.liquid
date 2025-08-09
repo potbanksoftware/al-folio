@@ -17,6 +17,9 @@ layout: default
   {% if author_data['handle'] == page.author %}
     {% assign blog_author = author_data %}
     {% break %}
+  {% elsif author_data['name'] == page.author %}
+    {% assign blog_author = author_data %}
+    {% break %}
   {% endif %}
 {% endfor %}
 
